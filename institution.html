@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.min.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Institution Info</title>
+    </head>
+    <body>
+        <div class="container-fluid">
+
+            <div class="row mx-auto w-75">
+                <div class="col-sm-12 p-0   ">
+                    <nav aria-label="breadcrumb" >
+                        <ol class="breadcrumb ">
+                            <li class="mr-2 "><i class="fa fa-home text-dark" aria-hidden="true"></i>
+                            </li>
+                          <li class="breadcrumb-item"><a href="personal.html">Personal Profile</a></li>
+                          <li class="breadcrumb-item"><a href="travel.html">Travel Information</a></li>
+                          <li class="breadcrumb-item"><a href="education.html">Education Information</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">Institution Information</li>
+                          <li class="breadcrumb-item"><a href="sponsor.html">Sponsor</a></li>
+
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="row mb-5 border p-2 p-sm-4 w-75 mx-auto">
+                
+                <div class="col-12" >
+                    <h4 class="text-primary">INSTITUTION INFORMATION</h4>
+                    <hr>
+                    <form action="" method="post">
+                        
+
+                        <div class="form-group row" >
+                            <div class="col-sm-12 mt-3">
+                                <h6>LIST SCHOOLS OUTSIDE OF NIGERIA WHERE YOU HAVE APPLIED FOR ADMISSION <small>(If none, write none)</small> </h6>
+                            </div>
+
+                            <div class="col-sm-12">
+                                <div class="form-row" id="schoolapplication">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="schoolname">Name of School</label>
+                                        <input type="text" class="form-control" id="schoolname" name="schoolname[]" placeholder="name of school">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="schoollocation">Location of School</label>
+                                        <input type="text" class="form-control" id="schoollocation" name="schoollocation[]" placeholder="city, country">
+                                    </div>
+        
+                                    <div class="col-sm-12 text-right">
+                                        <button type="button" class="btn btn-primary" id="newbtn">Add Field</button>
+                                    </div>   
+                                </div>
+                            </div>
+                                                                                
+                        </div>
+
+                        <div class="form-group row">
+                            <p class="col-sm-12">DO YOU HAVE AN ADMISSION TO A U.S. COLLEGE OR UNIVERSITY?</p>
+                            <div class="col-sm-12">
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="admissionresponse" name="admissionresponse" class="custom-control-input" value="yes">
+                                    <label class="custom-control-label" for="admissionresponse">Yes</label>
+                                  </div>
+                                  <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="admissionresponse2" name="admissionresponse" class="custom-control-input" value="no">
+                                    <label class="custom-control-label" for="admissionresponse2">No</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <p class="col-sm-12 col-form-label">WHEN DO YOU INTEND TO BEGIN SCHOOL IN THE UNITED STATES?</p>
+                            <div class="col-sm-12">
+                                <div class="form-group row">
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label for="semester" class="mr-3">Semester</label>
+                                            <select id="semester" name="semester" class="custom-select form-control">
+                                                <option selected>Choose Semester</option>
+                                                <option value="fall">Fall</option>
+                                                <option value="spring">Spring</option>
+                                            </select>                                        
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label for="beginschoolyear" class="mr-3">Date</label>
+                                            <select id="beginschoolyear" name="beginschoolyear" class="custom-select form-control">
+                                                <option selected>Choose Year</option>
+                                            </select>                                        
+                                        </div>
+                                    </div>
+                                </div>                                
+                            </div>    
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="institutiontype" class="col-sm-12 col-form-label">WHAT TYPE OF INSTITUTION ARE YOU INTERESTED IN ATTENDING?</label>
+                            <div class="col-sm-6">
+                                <select id="institutiontype" name="institutiontype" class="custom-select">
+                                    <option selected>--Choose Option--</option>
+                                    <option value="a">A four-year college or university</option>
+                                    <option value="b">Graduate School / Master / Phd</option>
+                                    <option value="c">A Vocational / technical school</option>
+                                    <option value="d">Short term program</option>
+                                    <option value="e">Professional development program</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="universitytype" class="col-sm-12 col-form-label">WHICH OF THE FOLLOWING ARE YOU CONSIDERING?</label>
+                            <div class="col-sm-6">
+                                <select id="universitytype" name="universitytype" class="custom-select">
+                                    <option selected>--Choose Option--</option>
+                                    <option value="a">A private university / college</option>
+                                    <option value="b">A public university / college</option>
+                                    <option value="c">A private, Religious affiliated university / college</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="universitysize" class="col-sm-12 col-form-label">WHAT SIZE OF COLLEGE ARE YOU THINKING OF ATTENDING?</label>
+                            <div class="col-sm-6">
+                                <select id="universitysize" name="universitysize" class="custom-select">
+                                    <option selected>--Choose Option--</option>
+                                    <option value="a">small - up to 1,999 students</option>
+                                    <option value="b">medium - up to 2,000 - 4,999 </option>
+                                    <option value="c">large - 5,000 - 9,999</option>
+                                    <option value="d">very large - 10,000 or more</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="universitysetting" class="col-sm-12 col-form-label">WHAT COLLEGE SETTING DO YOU PREFER?</label>
+                            <div class="col-sm-6">
+                                <select id="universitysetting" name="universitysetting" class="custom-select">
+                                    <option value="0" selected>Choose Option</option>
+                                    <option value="a">Major city or metropolitan area</option>
+                                    <option value="b">Small City or town </option>
+                                    <option value="c">Suburban community</option>
+                                    <option value="d">Rural</option>
+                                </select>
+                            </div>
+
+                            <div class="col-sm-12 showtextarea3">
+                                <label for="universitysetting_reason"><small class="text-muted">Please provide specific information for your choice</small></label>
+                                <textarea class="form-control" id="universitysetting_reason" name="universitysetting_reason" rows="4"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="collegetype" class="col-sm-12 col-form-label">WHAT TYPE OF COLLEGE?</label>
+                            <div class="col-sm-6">
+                                <select id="collegetype" name="collegetype" class="custom-select ">
+                                    <option value="0" selected>--Choose Option--</option>
+                                    <option value="a">All women or all men</option>
+                                    <option value="b">Coeducational </option>
+                                </select>
+                            </div>
+
+                            <div class="col-sm-12 showtextarea4">
+                                <label for="collegetype_reason"><small class="text-muted">Please provide specific information for your choice</small></label>
+                                <textarea class="form-control" id="collegetype_reason" name="collegetype_reason" rows="4"></textarea>
+                            </div>
+                            
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="extracurricular" class="col-sm-12 col-form-label">WHAT EXTRA-CURRICULAR ACTIVITIES ARE OF INTEREST TO YOU? <small class="textmuted">(ex: social clubs, religious organizations, be specific)</small> </label>
+                            <div class="col-sm-12">
+                                <textarea class="form-control" id="extracurricular" name="extracurricular" rows="4" maxlength="100"></textarea>
+                            </div>
+                        </div>
+
+                        
+                        
+
+                        <div class="form-group row">
+                            <label for="prospectfinance" class="col-sm-12 col-form-label">HOW DO YOU INTEND TO FINANCE YOUR EDUCATION?</label>
+                            <div class="col-sm-6">
+                                <select id="prospectfinance" name="prospectfinance[]" class="custom-select" multiple>
+                                    <option value="0" selected>--Choose Option--</option>
+                                    <option value="a">Parents</option>
+                                    <option value="b">Relatives </option>
+                                    <option value="c">Benefactor / Company Business </option>
+                                    <option value="d">Self </option>
+                                    <option value="e">Scholarship </option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="prospectinterest" class="col-sm-12 col-form-label">WHY ARE YOU INTERESTED IN GOING TO THE UNITED STATES FOR YOUR EDUCATION?</label>
+                            <div class="col-sm-6">
+                                <select id="prospectinterest" name="prospectinterest[]" class="custom-select" multiple>
+                                    <option value="0" selected>--Choose Option--</option>
+                                    <option value="a">Quality of institutions</option>
+                                    <option value="b">Flexibility of study </option>
+                                    <option value="c">Diversity of people & programs </option>
+                                    <option value="d">Research opportunities of study </option>
+                                    <option value="e">Scholarship opportunities </option>
+                                    <option value="f">Post-graduate opportunities </option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-6 text-left">
+                                <button type="submit" class="btn btn-primary">
+                                    Save
+                                </button>
+                            </div>
+                            <div class="col-6 text-right">
+                                <a href="sponsor.html" type="submit" class="btn btn-success">
+                                    Next
+                                </a>
+                            </div>
+                        </div>
+                        
+                    </form>
+                </div>
+
+            </div>
+        </div>
+        
+
+
+
+
+
+
+
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="js/popper.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script src="script.js"></script>
+        <script src="wordcount.js"></script>
+    </body>
+</html>

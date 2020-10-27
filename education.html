@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.min.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <title>Educational Info</title>
+    </head>
+    <body>
+        <div class="container-fluid">
+
+            <div class="row mx-auto w-75">
+                <div class="col-sm-12 p-0   ">
+                    <nav aria-label="breadcrumb" >
+                        <ol class="breadcrumb ">
+                            <li class="mr-2 "><i class="fa fa-home text-dark" aria-hidden="true"></i>
+                            </li>
+                          <li class="breadcrumb-item"><a href="personal.html">Personal Profile</a></li>
+                          <li class="breadcrumb-item"><a href="travel.html">Travel Information</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">Education Information </li>
+                          <li class="breadcrumb-item"><a href="institution.html">Institution Information</a></li>
+                          <li class="breadcrumb-item"><a href="sponsor.html">Sponsor</a></li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="row mb-5 p-2 border p-sm-4 w-75 mx-auto">
+                
+                <div class="col-12" >
+                    <h4 class="text-primary">EDUCATIONAL INFORMATION</h4>
+                    <hr>
+                    <form action="" method="post">
+                        <div class="form-group row">
+                            <label for="intendtostudy" class="col-sm-12 col-form-label ">WHAT DO YOU INTEND TO STUDY <small class="text-mute">(Major)</small> </label>
+                            <div class="col-sm-12">
+                                <select class="custom-select" name="intendtostudy" id="intendtostudy">
+                                    <option selected>Choose an option</option>
+                                    
+                                  </select>                            
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <p class="col-sm-12">DO YOU KNOW HOW TO USE A COMPUTER? </p>
+                            <div class="col-sm-12 my-2">
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="computerusage" name="computerusages" class="custom-control-input" value="yes">
+                                    <label class="custom-control-label" for="computerusage">Yes</label>
+                                  </div>
+                                  <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="computerusage2" name="computerusages" class="custom-control-input" value="no" checked>
+                                    <label class="custom-control-label" for="computerusage2" >No</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-11 my-2 showtextarea2">
+                                <label for="computerusage_info"><small class="text-muted">WHAT PROGRAMMES CAN YOU USE?</small></label> 
+                                <textarea class="form-control " id="computerusage_info" name="computerusage_info" rows="4"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group row border p-2" id="edu">                            
+                            <p  class="col-sm-12">LIST EDUCATIONAL INSTITUTION YOU HAVE ATTENDED BEGINNING WITH THE MOST RECENT <small class="text-mute">(include address, dates, field of study and degree received)</small> </p>
+                            <div class="col-sm-8">
+                                <div class="form-group">
+                                    <label for="institutionname">NAME OF INSTITUTION</label>
+                                    <input type="text" class="form-control" name="institutionname[]" id="institutionname" placeholder="Name of institution">
+                                </div> 
+                            </div> 
+
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label for="institutionyear">YEAR OF GRADUATION</label>
+                                    <input type="number" class="form-control" name="institutionyear[]" placeholder="Year of graduation">
+                                </div> 
+                            </div>                           
+                                                     
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="fieldofstudy">FIELD OF STUDY</label>
+                                    <input type="text" class="form-control" name="fieldofstudy[]" id="fieldofstudy" placeholder="Field of study">
+                                </div> 
+                            </div>  
+
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="degree">DEGREE RECEIVED</label>
+                                    <input type="text" class="form-control" name="degree[]" id="degree" placeholder="Degree received">
+                                </div> 
+                            </div>   
+
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="institutionaddress">ADDRESS OF INSTITUTION</label>
+                                    <input type="text" class="form-control" name="institutionaddress[]" id="institutionaddress" placeholder="City, Country">
+                                </div>                            
+                            </div>
+
+                            <div class="col-sm-4 offset-sm-8 my-2 text-right">
+                                <button type="button" class="btn btn-primary" id="butn">Add more field</button>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="name2" class="col-sm-12 col-form-label">LIST STANDARDIZED TESTS SCORES AND DATES YOU HAVE TAKEN / REGISTERED </label>
+                            
+                            <div class="col-sm-12">
+                                <div class="row d-none d-sm-flex ">
+                                    <div class="col-sm-3 offset-sm-3">
+                                        <p>SCORE</p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <p>DATE</p>
+                                    </div>
+                                </div>
+                                <div class="row my-4">
+                                    <div class="col-sm-3">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="toefl" name="toefl" value="toefl">
+                                            <label class="custom-control-label" for="toefl">TOEFL</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3  my-2 my-sm-0 my-sm-0">
+                                        <input type="number" class="form-control" name="toeflscore" placeholder="score">
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <input type="text" class="form-control datepicker" name="toefldate" placeholder="date">
+                                    </div>
+                                    
+                                </div>
+                                <div class="row my-4">
+                                    <div class="col-4 col-sm-3">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="sat1" name="sat1" value="sat1">
+                                            <label class="custom-control-label" for="sat1">SAT I</label>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-sm-3 my-2 my-sm-0 ">
+                                        <input type="number" class="form-control" name="satscore" placeholder="score">
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <input type="text" class="form-control datepicker" name="satdate" placeholder="date">
+                                    </div>
+                                    
+                                </div>
+                                <div class="row my-4">
+                                    
+                                    <div class="col-4 col-sm-3">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="sat2" name="sat2" value="sat2">
+                                            <label class="custom-control-label" for="sat2">SAT II</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 my-2 my-sm-0 ">
+                                        <input type="number" class="form-control" name="sat2score" placeholder="score">
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <input type="text" class="form-control datepicker" name="sat2date" placeholder="date">
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="row my-4">
+                                    <div class="col-4 col-sm-3">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="gre" name="gre" value="gre">
+                                            <label class="custom-control-label" for="gre">GRE</label>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-sm-3 my-2  my-sm-0">
+                                        <input type="number" class="form-control" name="grescore" placeholder="score">
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <input type="text" class="form-control datepicker" name="gredate" placeholder="date">
+                                    </div>
+                                    
+                                </div>
+                                
+                                <div class="row my-4">
+                                    <div class="col-5 col-sm-3">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="gre2" name="gre2" value="gre2">
+                                            <label class="custom-control-label" for="gre2">GRE <small class="text-muted">subj</small> </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3   my-2 my-sm-0">
+                                        <input type="number" class="form-control" name="gre2score" placeholder="score">
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <input type="text" class="form-control datepicker" name="gre2date" placeholder="date">
+                                    </div>
+                                    
+                                </div>
+                                
+                                <div class="row my-4">
+                                    <div class="col-sm-3">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="gmat" name="gmat" value="gmat">
+                                            <label class="custom-control-label" for="gmat">GMAT</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3  my-2 my-sm-0">
+                                        <input type="number" class="form-control" name="gmatscore" placeholder="score">
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <input type="text" class="form-control datepicker" name="gmatdate"  placeholder="date">
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="row my-4">
+                                    <div class="col-sm-3">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="lsat" name="lsat" value="lsat">
+                                            <label class="custom-control-label" for="lsat">LSAT</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3  my-2 my-sm-0">
+                                        <input type="number" class="form-control" name="lsatscore" placeholder="score">
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <input type="text" class="form-control datepicker" name="lsatdate" placeholder="date">
+                                    </div>
+                                    
+                                </div>
+                                <div class="row my-4">
+                                    <div class="col-sm-3">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="usmle" name="usmle" value="usmle">
+                                            <label class="custom-control-label" for="usmle">USMLE</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3  my-2 my-sm-0">
+                                        <input type="number" class="form-control" name="usmlescore" placeholder="score">
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <input type="text" class="form-control datepicker" name="usmledate" placeholder="date">
+                                    </div>
+                                    
+                                </div>
+                            </div>  
+                        </div>
+
+                        <div class="form-group row" >
+                            <div class="col-sm-12 mt-3">
+                                <h6>CAN YOU ADD GRADES FOR WAEC OR IGSCE IF AVAILABLE? </h6>
+                            </div>
+
+                            <div class="col-sm-12">
+                                <div class="form- group row" id="schoolgrades">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="subjectname">Subject Name</label>
+                                        <input type="text" class="form-control" id="subjectname" name="subjectname[]" placeholder="Subject name">
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <label for="grade">Grade</label>
+                                        <select id="grade" name="grade[]" class="custom-select form-control">
+                                            <option selected>Choose Grade</option>
+                                            <option value="a*">A<sup>*</sup> </option>
+                                            <option value="a">A</option>
+                                            <option value="b">B</option>
+                                            <option value="b2">B <sub>2</sub></option>
+                                            <option value="b3">B <sub>3</sub></option>
+                                            <option value="c">C</option>
+                                            <option value="c4">C <sub>4</sub></option>
+                                            <option value="c5">C <sub>5</sub></option>
+                                            <option value="c6">C <sub>6</sub></option>
+                                            <option value="d">D </option>
+                                            <option value="d7">D <sub>7</sub></option>
+                                            <option value="e">E </option>
+                                            <option value="e8">E <sub>8</sub></option>
+                                            <option value="f">F </option>
+                                            <option value="f9">F <sub>9</sub></option>
+                                        </select>
+                                    </div>
+        
+                                    <div class="col-sm-3 mt-sm-4 text-right">
+                                        <button type="button" class="btn btn-primary" id="addgrade">Add Field</button>
+                                    </div>   
+                                </div>
+                            </div>
+                                                                                
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-12 col-form-label">INDICATE AVERAGE SCHOOL GRADE <small class="tex-muted">(Choose one of the available options)</small></label>
+                            <div class="col-sm-5 mt-3 mb-2">
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="gradeopt1" name="gradeopt" value="1" class="custom-control-input">
+                                    <label class="custom-control-label" for="gradeopt1">Option 1</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-5 ">
+                                <select class="custom-select" name="avgschoolgrade">
+                                    <option selected>Choose an option</option>
+                                    <option value="a">A</option>
+                                    <option value="b">B</option>
+                                    <option value="c">C</option>
+                                    <option value="d">D</option>
+                                    <option value="e">E</option>
+                                    <option value="f">F</option>
+                                </select>
+                            </div>
+
+                            <div class="col-sm-5 mt-3 mb-2">
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="gradeopt2" name="gradeopt" value="2" class="custom-control-input">
+                                    <label class="custom-control-label" for="gradeopt2">Option 2</label>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-5 ">
+                                <select class="custom-select" name="avgschoolgrade">
+                                    <option selected>Choose an option</option>
+                                    <option value="1">7 - 6</option>
+                                    <option value="2">6 - 5</option>
+                                    <option value="3">5 - 4.5</option>
+                                    <option value="4">4.49 - 4</option>
+                                    <option value="5">3.99 - 3.5</option>
+                                    <option value="6">3.49 - 3</option>
+                                    <option value="7">2.99 - 2.5</option>
+                                    <option value="8">2.49 - 1.5</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-5 mt-3 mb-2">
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="gradeopt3" name="gradeopt" value="3" class="custom-control-input">
+                                    <label class="custom-control-label" for="gradeopt3">Option 3</label>
+                                </div>
+                            </div>
+                            
+                            <div class="col-sm-5 ">
+                                <select class="custom-select" name="avgschoolgrade">
+                                    <option selected>Choose an option</option>
+                                    <option value="1">100% - 70%</option>
+                                    <option value="2">69% - 60%</option>
+                                    <option value="3">59% - 50%</option>
+                                    <option value="4">49% - 0%</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-6 text-left">
+                                <button type="submit" class="btn btn-primary px-4">
+                                    Save
+                                </button>
+                            </div>
+                            <div class="col-6 text-right">
+                                <a href="institution.html" type="submit" class="btn btn-success px-4">
+                                    Next
+                                </a>
+                            </div>
+                        </div>
+
+                        
+                        
+                    </form>
+                </div>
+
+            </div>
+        </div>
+        
+
+
+
+
+
+
+
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="js/popper.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script src="script.js"></script>
+        <script src="wordcount.js"></script>
+    </body>
+</html>

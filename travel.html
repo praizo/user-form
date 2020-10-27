@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.min.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Travel Info</title>
+    </head>
+    <body>
+        <div class="container-fluid">
+
+            <div class="row mx-auto w-75">
+                <div class="col-sm-12 p-0   ">
+                    <nav aria-label="breadcrumb" >
+                        <ol class="breadcrumb ">
+                            <li class="mr-2 "><i class="fa fa-home text-dark" aria-hidden="true"></i>
+                            </li>
+                          <li class="breadcrumb-item"><a href="personal.html">Personal Profile</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">Travel Information </li>
+                          <li class="breadcrumb-item"><a href="education.html">Education Information</a></li>
+                          <li class="breadcrumb-item"><a href="institution.html">Institution Information</a></li>
+                          <li class="breadcrumb-item"><a href="sponsor.html">Sponsor</a></li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+            
+            <div class="row mb-5 border mx-auto p-2 p-sm-4 w-75">
+                
+                
+                <div class="col-sm-12" >
+                    <h3 class="text-primary">TRAVEL INFORMATION</h3>
+                    <hr>
+                    <form action="" method="post">
+                        <div class="form-group row">
+                            <div class="form-group col-sm-3 offset-sm-9">
+                                <div class="input-group">
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="fileupload" aria-describedby="inputGroupFileAddon01">
+                                        <label class="custom-file-label" for="fileupload" name="fileupload">Choose file</label>
+                                    </div>
+                                </div>
+                                <small class="text-muted">Upload Document</small>                        
+                            </div>
+                        </div>                        
+
+                        <div class="form-group row">
+                            <p class="col-sm-12">HAS ANYONE EVER FILED AN IMMIGRATION PETITION ON YOUR BEHALF TO ANY COUNTRY? <small class="text-muted">(If yes, please provide specific information?)</small></p>
+                            <div class="col-sm-12 my-2">
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="immigrationpetition" name="immigrationpetitions" class="custom-control-input response" value="yes">
+                                    <label class="custom-control-label" for="immigrationpetition">Yes</label>
+                                  </div>
+                                  <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="immigrationpetition2" name="immigrationpetitions" class="custom-control-input response" value="no" checked>
+                                    <label class="custom-control-label" for="immigrationpetition2" >No</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-11 my-2 showtextarea">
+                                <textarea class="form-control " id="immigrationpetition_info" name="immigrationpetition_info" rows="4"></textarea>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group row">
+                            <p class="col-sm-12">HAVE YOU EVER BEEN DENIED A VISA BY ANY COUNTRY? <small class="text-muted">( please provide names of country(ies) and year(s))</small></p>
+                            <div class="col-sm-12 my-2">
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="visadenied1" name="visadenied" class="custom-control-input" value="yes">
+                                    <label class="custom-control-label" for="visadenied1">Yes</label>
+                                  </div>
+                                  <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="visadenied2" name="visadenied" class="custom-control-input" value="no" checked>
+                                    <label class="custom-control-label" for="visadenied2" >No</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-11 my-2 showtextarea1">
+                                <textarea class="form-control " id="visadenied_info" name="visadenied_info" rows="4"></textarea>
+                            </div>
+                        </div>
+                      
+                        <div class="form-group row">
+                            <p class="col-sm-12">HAVE YOU EVER APPLIED FOR VISA LOTTERY? </p>
+                            <div class="col-sm-12">
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="visaresponse" name="visaresponse" class="custom-control-input" value="yes">
+                                    <label class="custom-control-label" for="visaresponse">Yes</label>
+                                  </div>
+                                  <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="visaresponse2" name="visaresponse" class="custom-control-input" value="no">
+                                    <label class="custom-control-label" for="visaresponse2">No</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group row p-3 border rounded mt-5" >
+                            <div class="col-sm-12 mt-3">
+                                <h5>RECORD OF TRAVEL OUTSIDE NIGERIA? </h5>
+                                <hr>
+                            </div>
+
+                            <div class="col-sm-12">
+                                <div class="form-row" id="travelRecord">
+                                    <div class="col-md-8 mb-3">
+                                        <label for="placeoftravel">Country</label>
+                                        <input type="text" class="form-control" id="placeoftravel" name="placeoftravel[]">
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="timeoftravel">Year</label>
+                                        <input type="number" class="form-control" name="timeoftravel[]">
+                                    </div>
+        
+                                    <div class="col-sm-12 text-right">
+                                        <button type="button" class="btn btn-primary" id="addbtn">Add Field</button>
+                                    </div>   
+                                </div>
+                            </div>
+                                                                                
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-6 text-left">
+                                <button type="submit" class="btn btn-primary px-4">
+                                    Save
+                                </button>
+                            </div>
+                            <div class="col-6 text-right">
+                                <a href="education.html" type="submit" class="btn btn-success px-4">
+                                    Next
+                                </a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+        
+
+
+
+
+
+
+
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="js/popper.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script src="script.js"></script>
+
+    </body>
+</html>
